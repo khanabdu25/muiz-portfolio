@@ -45,6 +45,112 @@
         </div>
       </header>
 
+      <section class="section system-ui">
+        <div class="main-grid">
+          <div class="controls-panel">
+            <div class="control-section">
+              <h3>Infrastructure</h3>
+
+              <div class="toggle-control">
+                <span class="toggle-label">Cache Layer</span>
+                <div class="toggle-switch active"></div>
+              </div>
+
+              <div class="toggle-control">
+                <span class="toggle-label">Message Queue</span>
+                <div class="toggle-switch"></div>
+              </div>
+
+              <div class="toggle-control">
+                <span class="toggle-label">DB Indexing</span>
+                <div class="toggle-switch active"></div>
+              </div>
+
+              <div class="toggle-control">
+                <span class="toggle-label">CDN</span>
+                <div class="toggle-switch active"></div>
+              </div>
+            </div>
+
+            <div class="control-section">
+              <h3>Scaling</h3>
+
+              <div class="slider-control">
+                <div class="slider-header">
+                  <span class="slider-label">Server Replicas</span>
+                  <span class="slider-value">3</span>
+                </div>
+                <input type="range" min="1" max="5" value="3" />
+              </div>
+
+              <div class="slider-control">
+                <div class="slider-header">
+                  <span class="slider-label">Load (req/sec)</span>
+                  <span class="slider-value">1000</span>
+                </div>
+                <input type="range" min="100" max="5000" value="1000" step="100" />
+              </div>
+            </div>
+
+            <button class="btn btn--primary simulate-button">Simulate Load</button>
+          </div>
+
+          <div class="metrics-panel">
+            <div class="metric-card">
+              <div class="metric-header">
+                <div class="metric-title">Average Latency</div>
+                <span class="status-badge good">Excellent</span>
+              </div>
+              <div>
+                <span class="metric-value">42</span>
+                <span class="metric-unit">ms</span>
+              </div>
+              <div class="chart-placeholder">Latency over time</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <div class="metric-title">Throughput</div>
+                <span class="status-badge good">Healthy</span>
+              </div>
+              <div>
+                <span class="metric-value">980</span>
+                <span class="metric-unit">req/sec</span>
+              </div>
+              <div class="chart-placeholder">Throughput trend</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <div class="metric-title">Error Rate</div>
+                <span class="status-badge warning">Watch</span>
+              </div>
+              <div>
+                <span class="metric-value">0.6</span>
+                <span class="metric-unit">%</span>
+              </div>
+              <div class="chart-placeholder">Error rate trend</div>
+            </div>
+
+            <div class="architecture-diagram">
+              <div class="diagram-title">Current System Architecture</div>
+              <div class="diagram-content">
+                <div class="node active">Load Balancer</div>
+                <div class="diagram-row">
+                  <div class="node active">Server 1</div>
+                  <div class="node active">Server 2</div>
+                  <div class="node active">Server 3</div>
+                </div>
+                <div class="diagram-row">
+                  <div class="node active">Redis Cache</div>
+                  <div class="node active">PostgreSQL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="module-detail">
           <div class="detail-card">
